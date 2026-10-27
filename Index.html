@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Discovery of Electron – Bal Bharti Vidya Mandir School</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef8f6;--card:#fff;--ink:#0b2a3a;--mut:#47636f;--ac:#0b7f75;--bd:#c3e2dd;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#06141f;--card:#0d2433;--ink:#e6f4f1;--mut:#9bb8c2;--ac:#2dd4bf;--bd:#1b3d52}}
+:root[data-theme="dark"]{--bg:#06141f;--card:#0d2433;--ink:#e6f4f1;--mut:#9bb8c2;--ac:#2dd4bf;--bd:#1b3d52}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpath d='M28 66L0 50V16L28 0l28 16v34zM28 100L0 84V66m56 0v18L28 100' fill='none' stroke='%232dd4bf' stroke-opacity='.13'/%3E%3C/svg%3E");color:var(--ink);font:16px/1.65 "Space Grotesk",system-ui,sans-serif}
+header{background:linear-gradient(135deg,#042a35,#0b4f62 55%,#13788a);color:#fff;padding:30px 18px 32px;display:flex;gap:22px;align-items:center;justify-content:center;flex-wrap:wrap;text-align:center;border-radius:0 0 30px 30px;box-shadow:0 8px 30px rgba(4,42,53,.4)}
+h1{margin:0;font-weight:700;font-size:clamp(26px,5.4vw,46px);line-height:1.15}
+header h2{margin:8px 0;font-weight:600;font-size:clamp(19px,3.6vw,30px);color:#7ff0e0}
+.by{margin:6px 0 0;display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);padding:5px 18px;border-radius:99px}
+.tile{width:94px;height:104px;border:2px solid #7ff0e0;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(127,240,224,.1)}
+.tile small{align-self:flex-start;margin-left:9px;font-size:13px}.tile b{font-size:38px;line-height:1}.tile span{font-size:12px}
+main{max-width:980px;margin:0 auto;padding:22px 14px 36px}
+section{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:20px;margin-bottom:22px}
+h3{margin:0 0 4px;font-size:22px}h4{margin:16px 0 6px;color:var(--ac);font-size:18px}
+p{margin:6px 0}.hint{color:var(--mut)}
+#stage{position:relative;margin-top:12px;border-radius:16px;overflow:hidden;background:radial-gradient(circle at 50% 38%,#0d3248,#06161f);border:1px solid #1d5068;box-shadow:0 10px 40px rgba(13,148,136,.25)}
+#svg{display:block;width:100%;height:auto}
+#cv{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+svg text{fill:#cfe9ee;stroke:none;font:15px "Space Grotesk",sans-serif}
+.p{cursor:pointer}.p:hover{filter:brightness(1.4) drop-shadow(0 0 6px #2dd4bf)}.p.sel{filter:drop-shadow(0 0 9px #ffd166)}
+#plg,#ped{transition:transform .25s}#plg.dn{transform:translateY(16px)}#ped.dn{transform:translateY(8px)}
+.lit #bl{filter:drop-shadow(0 0 7px #ff3b3b)}
+#stat{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+#stat div{border:1px solid var(--bd);border-radius:10px;padding:8px 12px}
+#stat .w{grid-column:1/-1}#stat small{display:block;color:var(--mut);font-size:13px}#stat b{font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.ch{font:inherit;font-size:14px;border:1px solid var(--bd);background:transparent;color:var(--ink);padding:5px 14px;border-radius:99px;cursor:pointer}
+.ch.on{background:var(--ac);border-color:var(--ac);color:#04222b;font-weight:600}
+#panel{margin-top:12px;border:1px solid var(--bd);border-left:5px solid var(--ac);border-radius:12px;padding:6px 18px 16px}
+.ctl{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:8px}
+button.b{font:inherit;font-weight:600;border:0;border-radius:10px;padding:9px 16px;cursor:pointer;background:var(--ac);color:#04222b}
+button.b.alt{background:transparent;border:1px solid var(--ac);color:var(--ink)}button.b.red{background:#e5262e;color:#fff}
+input[type=range]{width:min(320px,100%);accent-color:var(--ac)}
+.bar{flex:1 1 180px;height:10px;border-radius:9px;background:var(--bd);overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,#2dd4bf,#ffd166)}
+ol{padding-left:26px}li{margin:3px 0}
+.box{background:linear-gradient(135deg,#0b4f62,#13788a);color:#fff;border-radius:12px;padding:12px 16px;margin:10px 0}
+.eq{font-size:22px;text-align:center;font-weight:600;background:rgba(45,212,191,.12);border:1px dashed var(--ac);border-radius:12px;padding:10px;margin:10px 0}
+footer{text-align:center;color:var(--mut);padding:0 14px 30px;font-size:14px}
+@media(max-width:560px){#stat{grid-template-columns:1fr 1fr}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body>
+<header>
+<svg id="atom" width="112" height="112" viewBox="-60 -60 120 120" aria-hidden="true"></svg>
+<div><h1>Bal Bharti Vidya Mandir School</h1><h2>Discovery of Electron</h2><p class="by">Represented by <b>Harshit Garg</b></p></div>
+<div class="tile" aria-hidden="true"><small>−1</small><b>e⁻</b><span>Electron</span></div>
+</header>
+<main>
+<section>
+<h3>🧪 Thomson’s cathode ray tube</h3>
+<p class="hint">Tap any part of the diagram to learn about it. Tap the pump to remove air, tap the voltage source to change volts, tap the red switch to start or stop the current.</p>
+<div id="stage">
+<svg id="svg" viewBox="0 0 760 410" class="lit">
+<g fill="none" stroke="#cfe9ee" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<g class="p" data-p="wires"><path d="M105 190H45V330H345M415 330H520M580 330H715V190H655" stroke="#8fb0bb"/><path d="M105 190H45V330H345M415 330H520M580 330H715V190H655" stroke="transparent" stroke-width="22"/></g>
+<g class="p" data-p="tube"><path d="M170 150H590a40 40 0 0 1 0 80H170a40 40 0 0 1 0-80z" fill="rgba(120,200,220,.07)"/><rect x="100" y="178" width="50" height="24" rx="8"/><rect x="610" y="178" width="50" height="24" rx="8"/></g>
+<g class="p" data-p="pump"><path d="M380 150V85H478" stroke="#8fb0bb" stroke-width="12"/><path d="M380 150V85H478" stroke="#08202e" stroke-width="6"/><path d="M380 74V50M373 58l7-9 7 9" stroke="#ffd166"/>
+<rect x="478" y="58" width="34" height="60" rx="5" fill="#16465c"/><g id="plg"><path d="M495 58V24M478 24H512" stroke="#ffd166" stroke-width="5"/></g><rect id="ped" x="468" y="118" width="54" height="9" rx="3" fill="#ffd166" stroke="none"/><text x="530" y="100">Foot air pump</text><text x="380" y="36" text-anchor="middle">To vacuum pump</text><rect x="360" y="20" width="190" height="115" fill="transparent" stroke="none"/></g>
+<g class="p" data-p="cathode"><rect x="182" y="156" width="6" height="68" rx="2" fill="#3b9bff" stroke="none"/><circle cx="125" cy="150" r="11" fill="#08202e" stroke="#3b9bff"/><text x="125" y="156" text-anchor="middle" style="fill:#3b9bff;font-size:18px">−</text><text x="14" y="172">cathode</text><rect x="95" y="140" width="100" height="100" fill="transparent" stroke="none"/></g>
+<g class="p" data-p="anode"><rect x="572" y="156" width="6" height="68" rx="2" fill="#ff4d5a" stroke="none"/><circle cx="635" cy="150" r="11" fill="#08202e" stroke="#ff4d5a"/><text x="635" y="156" text-anchor="middle" style="fill:#ff4d5a;font-size:18px">+</text><text x="672" y="172">anode</text><rect x="565" y="140" width="100" height="100" fill="transparent" stroke="none"/></g>
+<g class="p" data-p="voltage"><path d="M355 318V342M370 306V354M385 318V342M400 306V354" stroke-width="3.5"/><text x="380" y="386" text-anchor="middle">High voltage</text><text x="414" y="316" style="fill:#ff4d5a">+</text><text x="338" y="316" style="fill:#3b9bff">−</text><rect x="330" y="290" width="95" height="110" fill="transparent" stroke="none"/></g>
+<g class="p" data-p="switch"><circle cx="520" cy="330" r="6" fill="#ff3b3b" stroke="none"/><circle cx="580" cy="330" r="6" fill="#ff3b3b" stroke="none"/><line id="bl" x1="520" y1="330" x2="580" y2="330" stroke="#ff3b3b" stroke-width="6"/><text id="sw" x="550" y="364" text-anchor="middle" style="fill:#ff8a8a"></text><rect x="500" y="285" width="100" height="95" fill="transparent" stroke="none"/></g>
+</g></svg>
+<canvas id="cv"></canvas></div>
+<div id="stat"><div><small>Switch</small><b id="s1"></b></div><div><small>Voltage</small><b id="s2"></b></div><div><small>Pressure</small><b id="s3"></b></div><div class="w"><small>What you see</small><b id="s4"></b></div></div>
+<div class="chips" id="chips"></div>
+<div id="panel"></div>
+</section>
+<section>
+<h3>📘 Discovery of sub-atomic particles</h3>
+<h4>Discovery of electron (Thomson’s cathode ray experiment)</h4>
+<p>In this experiment a gas discharge tube made of hard glass and fitted with metal electrodes was evacuated by a vacuum pump, and a high voltage was applied across the electrodes. Thomson observed that some invisible ray, originating from the cathode, moves towards the anode in the gas discharge tube. Since the radiation originates from the cathode, he termed it the cathode ray.</p>
+<h4>Properties of cathode rays</h4>
+<ol type="i"><li>They travel in a straight line.</li><li>They travel perpendicular to the surface of the cathode.</li><li>They are independent of the type of metal used as the electrode.</li><li>They get deflected in a magnetic field.</li><li>They contain negative charge.</li><li>They are made up of small invisible particles.</li></ol>
+<div class="box"><b>Conclusion:</b> Cathode ray is made up of a stream of invisible, negatively charged particles, which are named electrons.</div>
+<h4>Charge to mass ratio of electron</h4>
+<p>Thomson was able to determine the value of e/m as:</p>
+<div class="eq">e / mₑ = 1.758820 × 10¹¹ C kg⁻¹</div>
+<p>where mₑ = mass of the electron in kg and e = magnitude of the charge on the electron in coulomb (C). Since electrons are negatively charged, the charge on an electron is <b>−e</b>.</p>
+<h4>Charge on the electron</h4>
+<p>R. A. Millikan devised a method known as the oil drop experiment to determine the charge on the electron. He found it to be:</p>
+<div class="eq">−1.6 × 10⁻¹⁹ C</div>
+</section>
+</main>
+<footer>Bal Bharti Vidya Mandir School, Chemistry Class 11. Represented by Harshit Garg.</footer>
+<script>
+const $=s=>document.querySelector(s),W=760,H=410,S={on:1,V:10,P:760};
+$('#atom').innerHTML=[0,60,120].map(r=>`<g transform="rotate(${r})"><ellipse rx="50" ry="18" fill="none" stroke="#7ff0e0" stroke-opacity=".6"/><circle r="4" fill="#7ff0e0"><animateMotion dur="${2.6+r/60}s" repeatCount="indefinite" path="M50 0A50 18 0 1 1-50 0A50 18 0 1 1 50 0"/></circle></g>`).join('')+'<circle r="7" fill="#ffd166"/>';
+const I={
+cathode:['Cathode (−)','The negatively charged metal plate, drawn in blue. Cathode rays start here and move towards the anode. The rays are the same whatever metal the cathode is made of, so electrons are present in all matter.'],
+anode:['Anode (+)','The positively charged plate, drawn in red. It attracts the negatively charged cathode rays. Where the rays hit the glass beyond it, the glass glows green (fluorescence).'],
+tube:['Gas discharge tube','A sealed tube of hard glass with a metal electrode at each end. At normal pressure the gas inside does not conduct. At low pressure and high voltage the gas glows, and at very low pressure cathode rays appear.'],
+pump:['Vacuum pump (foot air pump)','It removes gas from the tube and lowers the pressure. Press it again and again: at high pressure there is no discharge, at medium pressure a coloured glow appears, and near 0.01 mmHg a clear cathode ray beam is seen. “Let air in” raises the pressure again.'],
+voltage:['High voltage source','A battery or power supply that gives thousands of volts between the electrodes. This large potential difference pulls electrons out of the cathode and speeds them towards the anode. Drag the slider to change the voltage.'],
+switch:['Switch (red)','It closes or opens the circuit. When it is ON, the voltage reaches the electrodes and the yellow current arrows move. When it is OFF, the voltage stops and the rays vanish.'],
+wires:['Connecting wires','They join the electrodes to the high voltage source. Yellow arrows show conventional current, from the + terminal through the tube to the − terminal. The electrons themselves travel the opposite way in the wires.'],
+rays:['Cathode rays','An invisible stream of negatively charged particles (electrons) that leaves the cathode and moves to the anode in a straight line. They are deflected by a magnetic field and do not depend on the metal of the electrode. Lower the pressure to see them.']};
+$('#chips').innerHTML=Object.keys(I).map(k=>`<button class="ch" data-p="${k}">${I[k][0].split(' (')[0]}</button>`).join('');
+const cv=$('#cv'),cx=cv.getContext('2d');let k=1;
+const rs=()=>{const r=cv.getBoundingClientRect(),d=devicePixelRatio||1;cv.width=r.width*d;cv.height=r.height*d;k=cv.width/W};addEventListener('resize',rs);
+const PL=[[105,190],[45,190],[45,330],[345,330]],PR=[[415,330],[715,330],[715,190],[655,190]];
+const ln=p=>{let L=[0];for(let i=1;i<p.length;i++)L.push(L[i-1]+Math.hypot(p[i][0]-p[i-1][0],p[i][1]-p[i-1][1]));return L},T=a=>a[a.length-1],LL=ln(PL),LR=ln(PR);
+const at=(p,L,s)=>{s=Math.max(0,Math.min(s,T(L)));let i=1;while(i<L.length-1&&L[i]<s)i++;const f=(s-L[i-1])/(L[i]-L[i-1]),a=p[i-1],b=p[i];return[a[0]+(b[0]-a[0])*f,a[1]+(b[1]-a[1])*f,Math.atan2(b[1]-a[1],b[0]-a[0])]};
+const vv=()=>S.on?S.V:0,stg=()=>{const v=vv(),P=S.P;return v<2?0:P>100?0:P>1?1:P>.01?2:3};
+const M=Array.from({length:80},()=>({x:165+Math.random()*430,y:160+Math.random()*60,a:Math.random()*6.3})),E=[],G=[];let t0=0,ac=0;
+function tubePath(){cx.beginPath();cx.moveTo(170,150);cx.lineTo(590,150);cx.arc(590,190,40,-1.5708,1.5708);cx.lineTo(170,230);cx.arc(170,190,40,1.5708,4.7124);cx.closePath()}
+function pill(x,y,s,c){cx.font='600 13px "Space Grotesk",sans-serif';const w=cx.measureText(s).width+16;cx.fillStyle='rgba(6,22,31,.92)';cx.strokeStyle=c;cx.lineWidth=1.5;cx.beginPath();cx.roundRect?cx.roundRect(x-w/2,y-12,w,24,12):cx.rect(x-w/2,y-12,w,24);cx.fill();cx.stroke();cx.fillStyle=c;cx.textAlign='center';cx.fillText(s,x,y+4.5)}
+function fr(t){requestAnimationFrame(fr);const dt=Math.min(.05,(t-t0)/1000)||.016;t0=t;cx.setTransform(k,0,0,k,0,0);cx.clearRect(0,0,W,H);
+const st=stg(),v=vv(),I=.25+Math.min(1,v/20)*.75;
+cx.save();tubePath();cx.clip();
+if(st&&st<3){const a=(st==1?.5:.16)*I,g=cx.createLinearGradient(130,0,630,0);g.addColorStop(0,`rgba(255,110,190,${a})`);g.addColorStop(.5,`rgba(190,90,255,${a})`);g.addColorStop(1,`rgba(110,130,255,${a})`);cx.fillStyle=g;cx.fillRect(130,145,500,90)}
+if(st>1){const g=cx.createRadialGradient(560,190,5,560,190,95),f=st==3;g.addColorStop(0,`rgba(130,255,150,${(f?.8:.18)*I})`);g.addColorStop(1,'rgba(130,255,150,0)');cx.fillStyle=g;cx.fillRect(440,145,190,90);
+const b=cx.createLinearGradient(190,0,575,0);b.addColorStop(0,`rgba(140,240,255,${(f?.5:.12)*I})`);b.addColorStop(1,'rgba(140,240,255,.1)');cx.fillStyle=b;cx.fillRect(190,f?187:182,385,f?6:16)}
+const N=Math.round(80*Math.log10(1+S.P)/2.881);
+for(let i=0;i<N;i++){const m=M[i];m.a+=(Math.random()-.5)*1.2;m.x+=Math.cos(m.a)*45*dt;m.y+=Math.sin(m.a)*45*dt;if(m.x<165||m.x>595){m.a=Math.PI-m.a;m.x=Math.max(165,Math.min(595,m.x))}if(m.y<158||m.y>222){m.a=-m.a;m.y=Math.max(158,Math.min(222,m.y))}cx.fillStyle=st==1?'rgba(255,190,240,.95)':'rgba(180,215,235,.75)';cx.beginPath();cx.arc(m.x,m.y,2.3,0,6.3);cx.fill()}
+if(st>1){const f=st==3;ac+=dt*v*(f?4:1.5);while(ac>=1&&E.length<220){ac--;E.push({x:190,y:190+(Math.random()-.5)*(f?3:12),vx:(100+Math.sqrt(v)*70)*(f?1:.55),vy:f?0:(Math.random()-.5)*80,e:f?575:210+Math.random()*330})}ac%=1}else E.length=0;
+cx.strokeStyle='rgba(150,250,255,.95)';cx.lineWidth=2;
+for(let i=E.length-1;i>=0;i--){const e=E[i];e.x+=e.vx*dt;e.y+=e.vy*dt;if(e.x>e.e){E.splice(i,1);continue}cx.beginPath();cx.moveTo(e.x-e.vx*.035,e.y-e.vy*.035);cx.lineTo(e.x,e.y);cx.stroke()}
+cx.restore();
+for(let i=G.length-1;i>=0;i--){const g=G[i];g.s+=260*dt;if(g.s>T(g.L)){G.splice(i,1);continue}if(g.s<0)continue;const q=at(g.p,g.L,g.s);cx.fillStyle=`rgba(200,230,245,${1-g.s/T(g.L)*.6})`;cx.beginPath();cx.arc(q[0],q[1],2.6,0,6.3);cx.fill()}
+if(S.on){const off=(t/1000*(40+v*6))%36;cx.strokeStyle='#ffd166';cx.lineWidth=2.4;cx.lineCap='round';cx.globalAlpha=st?1:.55;
+for(const[p,L]of[[PL,LL],[PR,LR]])for(let s=off;s<T(L);s+=36){const q=at(p,L,s);if(q[1]==330&&q[0]>505&&q[0]<595)continue;cx.save();cx.translate(q[0],q[1]);cx.rotate(q[2]);cx.beginPath();cx.moveTo(-5,-5);cx.lineTo(3,0);cx.lineTo(-5,5);cx.stroke();cx.restore()}
+cx.globalAlpha=1;const b=Math.sin(t/450)*4;pill(672,262+b,'+'+v+' kV','#ffd166');pill(88,262-b,'0 V (−)','#7cc4ff');pill(380,284+b,v+' kV','#2dd4bf')}}
+function spawn(o){for(let i=0;i<14;i++){const p=[[165+Math.random()*430,165+Math.random()*50],[380,176],[380,85],[472,85]];if(o)p.reverse();G.push({p,L:ln(p),s:-Math.random()*160})}}
+function pump(o){S.P=Math.min(760,Math.max(.001,S.P*(o?2.5:.4)));for(const e of['#plg','#ped']){$(e).classList.add('dn');setTimeout(()=>$(e).classList.remove('dn'),260)}spawn(o);upd()}
+function upd(){const st=stg(),v=vv(),P=S.P;
+$('#s1').textContent=S.on?'ON':'OFF';$('#s2').textContent=v+' kV';$('#s3').textContent=(P>=10?P.toFixed(0):P>=1?P.toFixed(1):P.toPrecision(2))+' mmHg';
+$('#s4').textContent=[!S.on?'The switch is OFF, so no voltage reaches the electrodes. Close the switch.':v<2?'The voltage is too low. Raise it above 2 kV.':'The gas is still an insulator at this pressure. Pump the air out.','Gas discharge: collisions ionise the gas and it glows pink-violet. Keep pumping.','The glow is fading and dark spaces form. Rays start, but gas molecules still scatter them.','Very low pressure: a straight beam of cathode rays runs from cathode to anode and the glass glows green.'][st];
+const bl=$('#bl');bl.setAttribute('x2',S.on?580:571);bl.setAttribute('y2',S.on?330:296);$('#sw').textContent='Switch '+(S.on?'ON':'OFF');$('#svg').classList.toggle('lit',!!S.on);
+if($('#vl'))$('#vl').textContent=S.V+' kV';
+if($('#pb')){$('#pb').style.width=Math.max(2,(Math.log10(P)+3)/5.88*100)+'%';$('#pt').textContent=P>100?'High pressure':P>1?'Medium pressure':P>.01?'Low pressure':'Very low pressure'}
+if($('#b3'))$('#b3').textContent=S.on?'Switch OFF (stop voltage)':'Switch ON (continue voltage)'}
+function sel(p){document.querySelectorAll('.p').forEach(g=>g.classList.toggle('sel',g.dataset.p==p));document.querySelectorAll('.ch').forEach(c=>c.classList.toggle('on',c.dataset.p==p));
+const c={voltage:`<label>Voltage: <b id="vl"></b></label><input id="sl" type="range" min="0" max="30" value="${S.V}">`,pump:'<button class="b" id="b1">Press foot pump</button><button class="b alt" id="b2">Let air in</button><div class="bar"><i id="pb"></i></div><small id="pt"></small>',switch:'<button class="b red" id="b3"></button>'}[p]||'';
+$('#panel').innerHTML=`<h4>${I[p][0]}</h4><p>${I[p][1]}</p><div class="ctl">${c}</div>`;
+if($('#sl'))$('#sl').oninput=e=>{S.V=+e.target.value;upd()};if($('#b1')){$('#b1').onclick=()=>pump(0);$('#b2').onclick=()=>pump(1)}if($('#b3'))$('#b3').onclick=()=>{S.on^=1;upd()};upd()}
+$('#svg').addEventListener('click',e=>{const g=e.target.closest('.p');if(!g)return;const p=g.dataset.p;sel(p);if(p=='pump')pump(0);if(p=='switch'){S.on^=1;upd()}});
+$('#chips').addEventListener('click',e=>{const c=e.target.closest('.ch');if(c)sel(c.dataset.p)});
+rs();sel('tube');requestAnimationFrame(fr);
+</script></body></html>
